@@ -1,0 +1,20 @@
+ul.Process li {
+    height: 35px;
+    color: white;
+    text-align: left;
+    font-style: italic;
+    font-weight:bolder;
+    font-size: 10px;
+    line-height: 35px;
+    padding: 0px 20px;
+    margin-bottom: 5px;
+}
+
+li.Bachelor {
+    border-radius: 15px;
+}
+
+li.Curriculum {
+    background: rgb(241, 73, 6);
+}
+

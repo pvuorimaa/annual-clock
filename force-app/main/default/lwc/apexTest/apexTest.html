@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={processes.data}>
+                <template for:each={processes.data} for:item="process">
+                    <p key={process.Id}>{process.Name}</p>
+                    <p key={process.Id}>{process.Description__c}</p>
+                    <p key={process.Id}>{process.Level__c}</p>
+                    <p key={process.Id}>{process.ProcessType__c}</p>
+                    <p key={process.Id}>{process.StartDate__c}</p>
+                    <p key={process.Id}>{process.EndDate__c}</p>
+                    <p key={process.Id}>{process.Duration__c}</p>
+                    <p key={process.Id}>{process.Link__c}</p>
+                </template>
+            </template>
+            <template if:true={processes.error}>
+                <c-error-panel errors={processes.error}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>    
+</template>

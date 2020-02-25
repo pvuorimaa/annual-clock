@@ -1,0 +1,34 @@
+<template>
+    <lightning-card>
+        <h1 slot="title">Programme Management Annual Clock</h1>
+        <c-selector onfilterchange={handleFilterChange}></c-selector>
+        <lightning-layout>
+            <lightning-layout-item padding="horizontal-small" if:true={areFiltersVisible}>
+                <c-filters
+                    selected-levels={selectedLevels}
+                    selected-processes={selectedProcesses}
+                    selected-schools={selectedSchools}
+                    selected-academic-years={selectedAcademicYears}
+                    selected-periods={selectedPeriods}
+                    selected-months={selectedMonths}
+                    onlevelschange={handleLevelsChange}
+                    onprocesseschange={handleProcessesChange}
+                    onschoolschange={handleSchoolsChange}
+                    onacademicyearschange={handleAcademicYearsChange}
+                    onperiodschange={handlePeriodsChange}
+                    onmonthschange={handleMonthsChange}>
+                </c-filters>
+            </lightning-layout-item>
+            <lightning-layout-item padding="horizontal-small" flexibility="auto">
+                <c-bar-display
+                    selected-levels={selectedLevels}
+                    selected-processes={selectedProcesses}
+                    selected-schools={selectedSchools}
+                    selected-academic-years={selectedAcademicYears}
+                    selected-periods={selectedPeriods}
+                    selected-months={selectedMonths}>
+                </c-bar-display>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

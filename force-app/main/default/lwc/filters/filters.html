@@ -1,0 +1,54 @@
+<template>
+    <lightning-card>
+        <lightning-accordion active-section-name="Levels">
+            <lightning-accordion-section    name="Levels"
+                                            label="Levels">
+                <lightning-checkbox-group   name="Levels Group" 
+                                            options={levelsOptions} 
+                                            value={selectedLevels}
+                                            onchange={handleLevelsChange}>
+                </lightning-checkbox-group>
+            </lightning-accordion-section>
+            <lightning-accordion-section    name="Processes" 
+                                            label="Processes">
+                <lightning-checkbox-group   name="Processes Group" 
+                                            options={processesOptions} 
+                                            value={selectedProcesses}
+                                            onchange={handleProcessesChange}>
+                </lightning-checkbox-group>
+            </lightning-accordion-section>
+            <lightning-accordion-section    name="Schools" 
+                                            label="Schools">
+                <lightning-checkbox-group   name="School Group" 
+                                            options={schoolsOptions} 
+                                            value={selectedSchools}
+                                            onchange={handleSchoolsChange}>
+                </lightning-checkbox-group>
+            </lightning-accordion-section>
+            <lightning-accordion-section    name="AcademicYear" 
+                                            label="Academic Year">
+                <lightning-checkbox-group   name="AcademicYear" 
+                                            options={academicYearsOptions} 
+                                            value={selectedAcademicYears}
+                                            onchange={handleAcademicYearsChange}>
+                </lightning-checkbox-group>
+            </lightning-accordion-section>
+            <lightning-accordion-section    name="Period" 
+                                            label="Period">
+                <lightning-checkbox-group   name="Period" 
+                                            options={periodsOptions} 
+                                            value={selectedPeriods}
+                                            onchange={handlePeriodsChange}>
+                </lightning-checkbox-group>
+            </lightning-accordion-section>
+            <lightning-accordion-section    name="Month" 
+                                            label="Month">
+                <lightning-checkbox-group   name="Month" 
+                                            options={monthsOptions} 
+                                            value={selectedMonths}
+                                            onchange={handleMonthsChange}>
+                </lightning-checkbox-group>
+            </lightning-accordion-section>
+        </lightning-accordion>    
+    </lightning-card>
+</template>

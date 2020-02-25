@@ -1,0 +1,45 @@
+<template>
+    <!-- Process -->
+    <ul class="Process">
+        <div class="processElement" onclick={openmodal}>
+            {process.Name}
+            {dummy}
+            <li class={style}></li>
+        </div>
+    </ul>
+    <!-- ModalBox -->
+    <template if:true={openmodel}>
+        <div class="demo-only" style="height: 640px;">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning-button-icon
+                            style = "float: right"
+                            icon-name="utility:close"
+                            title="Close"
+                            alternative-text="Close"
+                            size="small"
+                            class="slds-m-left_xx-small"
+                            onclick={closeModal}>
+                        </lightning-button-icon>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{process.Name}</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p>{levelDescription}</p>
+                        <p>{process.Description}</p>
+                        <p><b>Start date</b> {process.StartDate__c}</p>
+                        <p><b>End date</b> {process.EndDate__c}</p>
+                        <p><b>Duration</b> {process.Duration__c}</p>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <p style="float: left">
+                            Support Link&nbsp;&nbsp;
+                            <lightning-button label={process.Link__c} variant="brand" onclick={linkMethod}></lightning-button>
+                        </p>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </template>
+</template>

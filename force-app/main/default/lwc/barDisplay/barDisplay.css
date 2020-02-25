@@ -1,0 +1,33 @@
+:host{
+    --divider: lightgrey;
+}
+.Bar {
+    list-style: none;
+    padding-top: 20px;
+    }
+
+.chart-wrapper .chart-values {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+ 
+.chart-wrapper .chart-values li {
+  flex: 1;
+  min-width: 80px;
+  text-align: center;
+}
+ 
+.chart-wrapper .chart-values li:not(:last-child) {
+  position: relative;
+}
+ 
+.chart-wrapper .chart-values li:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 1000px;
+  border-right: 1px solid var(--divider);
+}

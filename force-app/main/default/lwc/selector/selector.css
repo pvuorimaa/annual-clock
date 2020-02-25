@@ -1,0 +1,67 @@
+ul.Process li {
+    height: 20px;
+    width: 20px;
+    text-align: left;
+    font-style: italic;
+    font-weight:bolder;
+    font-size: 10px;
+    line-height: 20px;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+}
+
+li.Bachelor {
+    border-radius: 10px;
+}
+
+li.Master {
+    border-radius: 5px / 20px;
+}
+
+li.Both {
+    border-radius: 0px;
+}
+
+li.Gray {
+    background: gray;
+}
+
+li.Admissions {
+    background: rgb(225, 241, 6);
+}
+
+li.Evaluation {
+    background: rgb(7, 164, 12);
+}
+
+li.Curriculum {
+    background: rgb(241, 73, 6);
+}
+
+li.Graduation {
+    background: rgb(49, 6, 241);
+}
+
+li.Orientation {
+    background: rgb(241, 155, 6);
+}
+li.Marketing {
+    background: rgb(112, 84, 238);
+}
+li.Mobility {
+    background: rgb(202, 30, 236);
+}
+
+li.School {
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(80, 80, 80),
+        rgb(80,80,80) 2px,
+        rgb(180, 180, 180) 2px,
+        rgb(180, 180, 180) 4px
+      );
+}
+
+li.Event {
+    transform: rotate(45deg);
+}

@@ -1,0 +1,138 @@
+<template>
+    <lightning-card>
+        <lightning-layout vertical-align="end">
+            <lightning-layout-item padding="horizontal-small">
+                <lightning-button-icon  icon-name="utility:filter"
+                                        variant="bare"
+                                        alternative-text="Filter"
+                                        size="large"
+                                        class="slds-m-left_xx-small"
+                                        onclick={handleFilterChange}>
+                </lightning-button-icon>
+            </lightning-layout-item>
+            <lightning-layout-item padding="horizontal-small">
+                <lightning-input type="date" name="dateSelector" date-style="long" value="2019-10-24"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding="horizontal-small">
+                <lightning-radio-group  name="calenderGroup" 
+                                        options={calenderOptions} 
+                                        value={calenderValue}
+                                        type="button">
+                </lightning-radio-group>
+            </lightning-layout-item>
+            <!-- Used symbols -->
+            <lightning-layout-item>
+                <!-- First row-->
+                <lightning-layout>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Both Gray Event"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Process Event</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor School"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>School Process</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Gray"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Joint Process</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Admissions"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Admissions</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Orientation"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Orientation</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Evaluation"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Evaluation&nbsp;&amp;&nbsp;Development</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Mobility"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Student Mobility</p>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <!-- Second row-->
+                <lightning-layout>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Gray"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Bachelor&apos;s Process</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Master Gray"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Master&apos;s Process</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Both Gray"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Bachelor&apos;s&nbsp;&amp;&nbsp;Master&apos;s</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Curriculum"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Curriculum Desing</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Marketing"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Marketing&nbsp;&amp;&nbsp;Recruitment</p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <ul class="Process">
+                            <li class="Bachelor Graduation"></li>
+                        </ul>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-small">
+                        <p>Graduation</p>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

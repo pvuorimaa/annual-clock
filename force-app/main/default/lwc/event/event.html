@@ -1,0 +1,52 @@
+<template>
+    <!-- SVG event symbol with tooltip starts here -->   
+    <div class="tooltip" style="margin-left: 100px" onclick={openmodal}>
+        <svg height="40" width="40">
+            <circle cx="20" cy="17" r="15" stroke="black" stroke-width="2" fill="red"></circle>
+        </svg>
+        <div class="tooltiptext">
+            <p>November 28</p>
+            <p>Evaluation &amp; Development</p>
+            <p>Bachelor's Programmes</p>
+        </div>
+    </div>
+    <!-- SVG event symbol ends here -->
+    <!-- ModalBox -->
+    <template if:true={showModalBox}>
+        <div class="modal-box" style="height: 640px;">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning-button-icon
+                            style = "float: right"
+                            icon-name="utility:close"
+                            title="Close"
+                            alternative-text="Close"
+                            size="small"
+                            class="slds-m-left_xx-small"
+                            onclick={closeModal}>
+                        </lightning-button-icon>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Evaluation and Development</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p><i>Bachelor's programme</i></p>
+                        <p>Check-in meeting to prepare the study descriptions of the programmes</p>
+                        <p><b>Date </b>November 28, 2019</p>
+                        <p><b>Meeting time</b></p>
+                        <p>9:00-11:00</p>
+                        <p>Väre L301</p>
+                        <p><b>Next Event</b></p>
+                        <p>January 10 2020</p>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <p style="float: left">
+                            Support Link&nbsp;&nbsp;
+                            <lightning-button variant="brand" onclick={linkMethod}></lightning-button>
+                        </p>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </template>               
+</template>
