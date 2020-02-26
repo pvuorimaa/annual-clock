@@ -6,7 +6,7 @@ export default class BarDisplay extends LightningElement {
     Filters' values
     */
     @api selectedLevels;
-    @api selectedProcesses;
+    @api selectedCategories;
     @api selectedSchools;
     @api selectedAcademicYears;
     @api selectedPeriods;
@@ -27,8 +27,8 @@ export default class BarDisplay extends LightningElement {
     get statusLevels() {
         return this.statusHelper(this.selectedLevels,'All levels');
     }
-    get statusProcesses() {
-        return this.statusHelper(this.selectedProcesses,'All Processes');
+    get statusCategories() {
+        return this.statusHelper(this.selectedCategories,'All Categories');
     }
     get statusSchools() {
         return this.statusHelper(this.selectedSchools,'All Schools');

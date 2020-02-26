@@ -5,7 +5,7 @@ export default class Filters extends LightningElement {
     Filters' values
     */
     @api selectedLevels;
-    @api selectedProcesses
+    @api selectedCategories;
     @api selectedSchools;
     @api selectedAcademicYears;
     @api selectedPeriods;
@@ -21,19 +21,17 @@ export default class Filters extends LightningElement {
         ];
     }
     levelsAll = ['All', 'Bachelor', 'Master'];
-    get processesOptions() {
+    get categoriesOptions() {
         return [
             { label: 'All', value: 'All'},
-            { label: 'Admissions', value: 'Admissions'},
-            { label: 'Curriculum Design', value: 'Curriculum'},
-            { label: 'Evaluation and Development', value: 'Evaluation'},
-            { label: 'Graduation', value: 'Graduation'},
-            { label: 'Marketing and Recruitment', value: 'Marketing'},
-            { label: 'Orientation', value: 'Orientation'},
-            { label: 'Student Mobility', value: 'Mobility'},
+            { label: 'Evaluation', value: 'Evaluation'},
+            { label: 'Enrolment', value: 'Enrolment'},
+            { label: 'Planning', value: 'Planning'},
+            { label: 'Support', value: 'Support'},
+            { label: 'Impact', value: 'Impact'},
         ];
     }
-    processesAll = ['All', 'Admissions', 'Curriculum', 'Evaluation', 'Graduation', 'Marketing','Orientation','Mobility'];
+    categoriesAll = ['All', 'Evaluation', 'Enrolment', 'Planning', 'Support', 'Impact'];
     get schoolsOptions() {
         return [
             { label: 'All', value: 'All'},
@@ -123,11 +121,11 @@ export default class Filters extends LightningElement {
         this.dispatchEvent(event);
     }
 
-    handleProcessesChange(e) {
-        this.selectedProcesses = this.correctSelections(this.selectedProcesses, e.detail.value, this.processesAll);
+    handleCategoriesChange(e) {
+        this.selectedCategories = this.correctSelections(this.selectedCategories, e.detail.value, this.categoriesAll);
         // Custom event has selected values as parameter
-        const event = new CustomEvent('processeschange', {
-            detail: this.selectedProcesses
+        const event = new CustomEvent('categorieschange', {
+            detail: this.selectedCategories
         });
         this.dispatchEvent(event);
     }

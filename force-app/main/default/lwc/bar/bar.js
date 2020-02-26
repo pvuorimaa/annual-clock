@@ -81,14 +81,14 @@ export default class Bar extends LightningElement {
                 // Fire @track and create renderedCallback by changing value of dummy
                 this.dummy=' ';
         }
-        // Check processes
-        if (!this._selectedProcesses.includes('All') && 
-            !this._selectedProcesses.includes(this.process.ProcessType__c)) {
+        // Check categories
+        if (!this._selectedCategories.includes('All') && 
+            !this._selectedCategories.includes(this.process.Category__c)) {
                 this._isProcessVisible = false;
                 // Fire @track and create renderedCallback by changing value of dummy
                 this.dummy=' ';
         }
-        this.style = this.process.Level__c + " " + this.process.ProcessType__c;
+        this.style = this.process.Level__c + " " + this.process.Category__c;
     }
 
     // SelectedLevels defined using setter and getter, because it defines also element visibiity
@@ -103,16 +103,16 @@ export default class Bar extends LightningElement {
         return this._selectedLevel;
     }
 
-    // SelectedProcesses defined useing setter and getter, because it defines also element visibiity
-    _selectedProcesses = 'All';
+    // SelectedCategories defined using setter and getter, because it defines also element visibiity
+    _selectedCategories = 'All';
 
-    set selectedProcesses(value) {
-        this._selectedProcesses = value;
+    set selectedCategories(value) {
+        this._selectedCategories = value;
         this.checkVisibility();
     }
     
-    @api get selectedProcesses() {
-        return this._selectedProcesses;
+    @api get selectedCategories() {
+        return this._selectedCategories;
     }
     // ModalBox 
     @track openmodel = false;

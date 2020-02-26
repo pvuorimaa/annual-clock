@@ -6,13 +6,13 @@
             <lightning-layout-item padding="horizontal-small" if:true={areFiltersVisible}>
                 <c-filters
                     selected-levels={selectedLevels}
-                    selected-processes={selectedProcesses}
+                    selected-categories={selectedCategories}
                     selected-schools={selectedSchools}
                     selected-academic-years={selectedAcademicYears}
                     selected-periods={selectedPeriods}
                     selected-months={selectedMonths}
                     onlevelschange={handleLevelsChange}
-                    onprocesseschange={handleProcessesChange}
+                    oncategorieschange={handleCategoriesChange}
                     onschoolschange={handleSchoolsChange}
                     onacademicyearschange={handleAcademicYearsChange}
                     onperiodschange={handlePeriodsChange}
@@ -22,7 +22,7 @@
             <lightning-layout-item padding="horizontal-small" flexibility="auto">
                 <c-bar-display
                     selected-levels={selectedLevels}
-                    selected-processes={selectedProcesses}
+                    selected-categories={selectedCategories}
                     selected-schools={selectedSchools}
                     selected-academic-years={selectedAcademicYears}
                     selected-periods={selectedPeriods}

@@ -26,32 +26,24 @@ li.Gray {
     background: gray;
 }
 
-li.Admissions {
-    background: rgb(225, 241, 6);
-}
-
 li.Evaluation {
-    background: rgb(7, 164, 12);
+    background: rgb(224, 103, 184);
 }
 
-li.Curriculum {
-    background: rgb(241, 73, 6);
+li.Enrolment {
+    background: rgb(239, 53, 59);
 }
 
-li.Graduation {
-    background: rgb(49, 6, 241);
+li.Planning {
+    background: rgb(0, 94, 184);
 }
 
-li.Orientation {
-    background: rgb(241, 155, 6);
+li.Support {
+    background: rgb(32, 172, 32);
 }
-li.Marketing {
-    background: rgb(112, 84, 238);
+li.Impact {
+    background: rgb(0, 162, 199);
 }
-li.Mobility {
-    background: rgb(202, 30, 236);
-}
-
 li.School {
     background: repeating-linear-gradient(
         45deg,
