@@ -1,18 +1,18 @@
 <template>
-    <!-- process list is now replaced by bars
-         remove this when process groups work well
-    <template for:each={processes} for:item="process">
-        <p key={process.Id}>Process: {process.Name}</p>
-    </template>
-    -->
+    <!-- Group Name -->
+    <h1 class="groupElement">
+        <span class="group">{groupName}{dummy}</span>
+    </h1>
+    <!-- Processes -->
     <template for:each={processes} for:item="process">
         <c-bar
             key={process.Id}
             process={process}
             display-date={displayDate}
             selected-levels={selectedLevels}
-            selected-categories={selectedCategories}>
+            selected-categories={selectedCategories}
+            onvisible={visibleHandler}
+            onhidden={hiddenHandler}>
         </c-bar>
     </template>
-
 </template>

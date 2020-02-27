@@ -16,7 +16,7 @@
  
 .chart-wrapper .chart-values li {
   flex: 1;
-  min-width: 80px;
+  min-width: 60px;
   text-align: center;
 }
  
@@ -30,21 +30,4 @@
   right: 0;
   height: 1000px;
   border-right: 1px solid var(--divider);
-}
-
-h1 {
-  font-size: 16px;
-  color: grey;
-  font-style: italic;
-  font-weight: bold;
-
-}
-.group {
-  color: grey;
-}
-.group:after {
-  content: " ";
-  width: 500px;
-  display: inline-block;
-  border-bottom: 1px solid grey;
 }

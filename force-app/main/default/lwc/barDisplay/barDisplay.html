@@ -1,5 +1,6 @@
 <template>
     <lightning-card>
+        <!-- Filters' status -->
         <p>
             <lightning-badge label={statusLevels}></lightning-badge>
             <lightning-badge label={statusCategories}></lightning-badge>
@@ -8,6 +9,7 @@
             <lightning-badge label={statusPeriods}></lightning-badge>
             <lightning-badge label={statusMonths}></lightning-badge>
         </p>
+        <!-- Months -->
         <div class="slds-m-around_x-small">
             <div class="chart-wrapper">
                 <ul class="chart-values">
@@ -25,10 +27,8 @@
                   <li>July</li>
                 </ul>
             </div>
+            <!-- Groups -->
             <template for:each={groups} for:item="group">
-                <h1 key={group.Group__c}>
-                    <span class="group">Group: {group.Group__c}</span>
-                </h1>
                 <c-group-processes
                     key={group.Group__c}
                     group-name={group.Group__c}
@@ -37,18 +37,6 @@
                     selected-categories={selectedCategories}>
                 </c-group-processes>
             </template>
-¨            <!-- This has now been moved to the groupProcesses component
-                  Remove this, when process groups work well
-            <template for:each={processes.data} for:item="process">
-                <c-bar
-                    key={process.Id}
-                    process={process}
-                    display-date={displayDate}
-                    selected-levels={selectedLevels}
-                    selected-categories={selectedCategories}>
-                </c-bar>
-            </template>
-            -->    
         </div>
     </lightning-card>
 </template>

@@ -1,0 +1,16 @@
+h1 {
+    font-size: 16px;
+    color: grey;
+    font-style: italic;
+    font-weight: bold;
+  
+  }
+  .group {
+    color: grey;
+  }
+  .group:after {
+    content: " ";
+    width: fill;
+    display: block;
+    border-bottom: 1px solid grey;
+  }

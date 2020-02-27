@@ -60,11 +60,16 @@ export default class Bar extends LightningElement {
         processElement.style.width = titleWidth+"%";
         processElement.style.marginLeft = marginLeft+"%";
         barElement.style.width = barWidth+"%";
-        // Is the process visible?
+        /*
+        Is the process visible?
+        Send also event to parent
+        */
         if (this._isProcessVisible) {
             processElement.style.display = "block";
+            this.dispatchEvent(new CustomEvent('visible', {detail: this.process.Id,}));
         } else {
             processElement.style.display = "none";
+            this.dispatchEvent(new CustomEvent('hidden', {detail: this.process.Id,}));
         }
     }
 
