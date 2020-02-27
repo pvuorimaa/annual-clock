@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group__c</fullName>
+    <description>Process Groups. Users can define their own groups.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use existing group or enter new group name.</inlineHelpText>
+    <label>Group</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Student feedback process</fullName>
+                <default>false</default>
+                <label>Student feedback process</label>
+            </value>
+            <value>
+                <fullName>TEE evaluation</fullName>
+                <default>false</default>
+                <label>TEE evaluation</label>
+            </value>
+            <value>
+                <fullName>Programme review</fullName>
+                <default>false</default>
+                <label>Programme review</label>
+            </value>
+            <value>
+                <fullName>New programme</fullName>
+                <default>false</default>
+                <label>New programme</label>
+            </value>
+            <value>
+                <fullName>Student marketing</fullName>
+                <default>false</default>
+                <label>Student marketing</label>
+            </value>
+            <value>
+                <fullName>Admission process</fullName>
+                <default>false</default>
+                <label>Admission process</label>
+            </value>
+            <value>
+                <fullName>Student recruitment</fullName>
+                <default>false</default>
+                <label>Student recruitment</label>
+            </value>
+            <value>
+                <fullName>Orientation</fullName>
+                <default>false</default>
+                <label>Orientation</label>
+            </value>
+            <value>
+                <fullName>Student engagement</fullName>
+                <default>false</default>
+                <label>Student engagement</label>
+            </value>
+            <value>
+                <fullName>Curriculum design</fullName>
+                <default>false</default>
+                <label>Curriculum design</label>
+            </value>
+            <value>
+                <fullName>Student mobility</fullName>
+                <default>false</default>
+                <label>Student mobility</label>
+            </value>
+            <value>
+                <fullName>Graduation</fullName>
+                <default>false</default>
+                <label>Graduation</label>
+            </value>
+            <value>
+                <fullName>Stakeholder collaboration</fullName>
+                <default>false</default>
+                <label>Stakeholder collaboration</label>
+            </value>
+            <value>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+                <label>Alumni</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Evaluation</controllingFieldValue>
+            <valueName>Student feedback process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evaluation</controllingFieldValue>
+            <valueName>TEE evaluation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evaluation</controllingFieldValue>
+            <valueName>Programme review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evaluation</controllingFieldValue>
+            <valueName>New programme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrolment</controllingFieldValue>
+            <valueName>Student marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrolment</controllingFieldValue>
+            <valueName>Admission process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrolment</controllingFieldValue>
+            <valueName>Student recruitment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrolment</controllingFieldValue>
+            <valueName>Student engagement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Planning</controllingFieldValue>
+            <valueName>Curriculum design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support</controllingFieldValue>
+            <valueName>Orientation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support</controllingFieldValue>
+            <valueName>Student mobility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support</controllingFieldValue>
+            <valueName>Graduation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Impact</controllingFieldValue>
+            <valueName>Stakeholder collaboration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Impact</controllingFieldValue>
+            <valueName>Alumni</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

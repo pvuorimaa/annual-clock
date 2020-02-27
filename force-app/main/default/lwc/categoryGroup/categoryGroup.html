@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <h1 slot="title">Groups</h1>
+        <template for:each={groups} for:item="group">
+            <p key={group.Group__c}>Group: {group.Group__c}</p>
+            <c-group-processes
+                key={group.Group__c}
+                group-name={group.Group__c}>
+            </c-group-processes>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+h1 {
+    font-size: 30px;
+    border-bottom: grey;
+}
+h1:after {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid grey;
+}

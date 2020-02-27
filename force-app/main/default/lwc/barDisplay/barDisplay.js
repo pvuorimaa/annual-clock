@@ -1,5 +1,6 @@
 import { LightningElement, track, api, wire } from 'lwc';
 import getProcessList from '@salesforce/apex/AnnualClock.getProcessList';
+import getGroups from '@salesforce/apex/Test.getGroups';
 
 export default class BarDisplay extends LightningElement {
     /*
@@ -46,6 +47,25 @@ export default class BarDisplay extends LightningElement {
     NEW Read data from Apex method using Wire
     */
     @wire(getProcessList) processes;
+    /*
+    NEW: Process Group apex method function
+    */
+    @track error;
+    @track groups;
+
+    @wire(getGroups)
+    wiredGroups({ error, data }) {
+        if (data) {
+            this.groups = data;
+            console.log('data:' + JSON.stringify(data));
+            this.error = undefined;
+        // other treatment here ...        
+        } else if (error) {
+            this.groups = undefined;
+            this.error = error;
+        }
+    }
+
     // @track processes;
     /*
     connectedCallback() {

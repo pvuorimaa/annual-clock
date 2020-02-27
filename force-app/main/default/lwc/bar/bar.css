@@ -1,11 +1,11 @@
 ul.Process li {
-    height: 35px;
+    height: 20px;
     color: white;
     text-align: left;
     font-style: italic;
     font-weight:bolder;
-    font-size: 10px;
-    line-height: 35px;
+    font-size: 8px;
+    line-height: 20px;
     padding: 0px 20px;
     margin-bottom: 5px;
 }

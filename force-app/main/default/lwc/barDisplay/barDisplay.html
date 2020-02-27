@@ -8,16 +8,16 @@
             <lightning-badge label={statusPeriods}></lightning-badge>
             <lightning-badge label={statusMonths}></lightning-badge>
         </p>
-        <div class="slds-m-arooung_medium">
+        <div class="slds-m-around_x-small">
             <div class="chart-wrapper">
                 <ul class="chart-values">
-                  <li>August</li>
-                  <li>September</li>
-                  <li>October</li>
-                  <li>November</li>
-                  <li>December</li>
-                  <li>January</li>
-                  <li>February</li>
+                  <li>Aug</li>
+                  <li>Sep</li>
+                  <li>Oct</li>
+                  <li>Nov</li>
+                  <li>Dec</li>
+                  <li>Jan</li>
+                  <li>Feb</li>
                   <li>March</li>
                   <li>April</li>
                   <li>May</li>
@@ -25,6 +25,20 @@
                   <li>July</li>
                 </ul>
             </div>
+            <template for:each={groups} for:item="group">
+                <h1 key={group.Group__c}>
+                    <span class="group">Group: {group.Group__c}</span>
+                </h1>
+                <c-group-processes
+                    key={group.Group__c}
+                    group-name={group.Group__c}
+                    display-date={displayDate}
+                    selected-levels={selectedLevels}
+                    selected-categories={selectedCategories}>
+                </c-group-processes>
+            </template>
+¨            <!-- This has now been moved to the groupProcesses component
+                  Remove this, when process groups work well
             <template for:each={processes.data} for:item="process">
                 <c-bar
                     key={process.Id}
@@ -33,7 +47,8 @@
                     selected-levels={selectedLevels}
                     selected-categories={selectedCategories}>
                 </c-bar>
-            </template>    
+            </template>
+            -->    
         </div>
     </lightning-card>
 </template>
